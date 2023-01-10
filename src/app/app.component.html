@@ -35,9 +35,7 @@
             >
           </div>
         </div>
-        <p class="!userData.valid && userData.touched">
-          User data is invalid
-        </p>
+        <p class="!userData.valid && userData.touched">User data is invalid</p>
         <div class="form-group">
           <label for="secret">Secret Questions</label>
           <select
@@ -60,6 +58,13 @@
           ></textarea>
         </div>
         <p>Your reply : {{ answer }}</p>
+        <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input type="radio" name="gender" ngModel [value]="gender" />{{
+              gender
+            }}
+          </label>
+        </div>
         <button
           class="btn btn-primary"
           type="submit"
