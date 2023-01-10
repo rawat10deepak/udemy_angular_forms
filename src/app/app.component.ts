@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -24,6 +23,7 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.signupForm.valid);
+    console.log(this.signupForm);
     console.log('Submitted!!');
   }
 }
